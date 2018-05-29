@@ -1,0 +1,40 @@
+.container{
+  padding: 0;
+  position: absolute;
+   background-image: url("https://mixueoss.oss-cn-hangzhou.aliyuncs.com/wxapp/read.png");
+   height: 100%;
+   width: 100%;
+   background-size: 100% 100%;
+}
+
+.verse {
+  font-size: 40rpx;
+  color: #FF3000;
+}
+
+.verse-title{
+  font-size: 60rpx;
+  font-weight: bold;
+  color: rgb(255, 215, 0)
+}
+.verse-title-container{
+  padding-top: 320rpx;
+  text-align: center;
+}
+.verse-container{
+  border: 2rpx solid #FF3000;
+  border-radius: 20rpx;
+  text-align: center;
+  margin: 50rpx auto 0 auto; 
+  position: relative;
+  width: 96%;
+  padding: 10rpx 10rpx;
+  background-color: rgba(162, 180, 186, 0.8);
+}
+
+.start-container{
+  padding-top: 50rpx;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+}

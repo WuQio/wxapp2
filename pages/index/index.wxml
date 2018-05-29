@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='verse-title-container'>
+    <text class='verse-title'>每日金句</text>
+  </view>
+  <view class='verse-container'>
+    <text class='verse'>{{verse}}</text>
+  </view>
+  <view class='start-container'>
+    <button class='start' type='primary' bindtap='turnToPlay'>开始答题</button>
+  </view>
+</view>
