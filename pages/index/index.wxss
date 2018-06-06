@@ -8,12 +8,12 @@
 }
 
 .verse {
-  font-size: 40rpx;
-  color: #FF3000;
+  font-size: 13pt;
+  color: #E64340;
 }
 
 .verse-title{
-  font-size: 60rpx;
+  font-size: 20pt;
   font-weight: bold;
   color: rgb(255, 215, 0)
 }
@@ -22,7 +22,7 @@
   text-align: center;
 }
 .verse-container{
-  border: 2rpx solid #FF3000;
+  border: 2rpx solid #E64340;
   border-radius: 20rpx;
   text-align: center;
   margin: 50rpx auto 0 auto; 
@@ -33,8 +33,10 @@
 }
 
 .start-container{
-  padding-top: 50rpx;
+  margin: 10pt auto 0 auto;
+  width: 80%;
+  /* padding-top: 50rpx;
   margin: 0 auto;
   align-items: center;
-  display: flex;
+  display: flex; */
 }

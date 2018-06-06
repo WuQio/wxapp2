@@ -1,4 +1,6 @@
 const app = getApp();
+let issue = [];
+const getRandom = require("../../utils/util.js").getRandom;
 
 Page({
 
@@ -16,7 +18,8 @@ Page({
     wx.request({
       url: 'https://wuqio.mixue.ink/wxapp/json',
       success: (res)=>{
-        console.log(res.data);
+        issue = res.data;
+        console.log(issue);
         this.setData({
           data: res.data[0].question
         });

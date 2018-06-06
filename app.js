@@ -23,15 +23,15 @@ App({
               this.globalData.userInfo = res.userInfo;
 
 
-            
-              wx.request({
-                url: 'https://wuqio.mixue.ink/wxapp/test',
-                method: 'POST',
-                data: res,
-                success: (resp)=>{
-                  console.log(resp.data);
-                }
-              })
+              //登录发邮件提醒
+              // wx.request({
+              //   url: 'https://wuqio.mixue.ink/wxapp/test',
+              //   method: 'POST',
+              //   data: res,
+              //   success: (resp)=>{
+              //     console.log(resp.data);
+              //   }
+              // })
 
 
 

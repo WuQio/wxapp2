@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="container">
   <view class='verse-title-container'>
-    <text class='verse-title'>每日金句</text>
+    <text class='verse-title'>{{verseTitle}}</text>
   </view>
   <view class='verse-container'>
     <text class='verse'>{{verse}}</text>

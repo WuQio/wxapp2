@@ -1,1 +1,15 @@
-{{data}}
+<view class='container'>
+  <view class='q-container'></view>
+    <text class='question'>{{question}}</text>
+  <view class='candidates-container'></view>
+    <block wx:if="{{issue.candidates.length == 0}}">
+      <button class='candidate' data-text='yes'>是</button>
+      <button class='candidate' data-text='no'>否</button>
+    </block>
+    <block wx:else>
+      <block wx:for="{{issue.candidates}}" wx:key="item">
+        <button class='candidate' data-text='{{item}}'>{{item}}</button>
+      </block>
+    </block>
+  <view class='next-container'></view>
+</view>
