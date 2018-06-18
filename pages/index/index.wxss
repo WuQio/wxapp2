@@ -1,14 +1,15 @@
 .container{
+  background-color: #EFEFEF;
   padding: 0;
   position: absolute;
-   background-image: url("https://mixueoss.oss-cn-hangzhou.aliyuncs.com/wxapp/read.png");
+    background-image: url("https://mixueoss.oss-cn-hangzhou.aliyuncs.com/wxapp/read.png"); 
    height: 100%;
    width: 100%;
    background-size: 100% 100%;
 }
 
 .verse {
-  font-size: 13pt;
+  font-size: 36rpx;
   color: #E64340;
 }
 
@@ -18,7 +19,7 @@
   color: rgb(255, 215, 0)
 }
 .verse-title-container{
-  padding-top: 320rpx;
+  padding-top: 100rpx;
   text-align: center;
 }
 .verse-container{
@@ -33,10 +34,6 @@
 }
 
 .start-container{
+  width: 92%;
   margin: 10pt auto 0 auto;
-  width: 80%;
-  /* padding-top: 50rpx;
-  margin: 0 auto;
-  align-items: center;
-  display: flex; */
 }

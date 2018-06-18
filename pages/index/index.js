@@ -5,7 +5,8 @@ const app = getApp()
 Page({
   data: {
     verse: "爱是不加害于人的，所以爱就完全了律法。（罗13:10）\nLove does no harm to its neighbor. Therefore love is the fulfillment of the law.(Rom 13:10)",
-    verseTitle: "每日金句"
+    verseTitle: "每日金句",
+    notice: ""
   },
   onLoad: function () {
     //获取金句标题
@@ -30,6 +31,15 @@ Page({
         })
       }
     });
+    //获取notice
+    wx.request({
+      url: 'https://wuqio.mixue.ink/wxapp/noticeServlet',
+      success: (res)=>{
+        this.setData({
+          notice: res.data
+        });
+      }
+    })
   },
   turnToPlay: function(){
     wx.redirectTo({

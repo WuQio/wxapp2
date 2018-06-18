@@ -1,15 +1,20 @@
+<view wx:if='{{reqDone}}'>
+<wxc-progress percent="{{progress}}" active-color="#ff5692, #ac89ff"></wxc-progress>
 <view class='container'>
-  <view class='q-container'></view>
-    <text class='question'>{{question}}</text>
-  <view class='candidates-container'></view>
-    <block wx:if="{{issue.candidates.length == 0}}">
-      <button class='candidate' data-text='yes'>是</button>
-      <button class='candidate' data-text='no'>否</button>
+  <view class='q-container'>
+    <text class='question'>{{issues[idx].question}}</text>
+  </view>
+  <view class='candidates-container'>
+    <block wx:if="{{issues[idx].candidates.length == 0}}">
+      <wxc-button size='normal' type='warning' class='candidate' data-text='yes' data-id='1' bindtap='choose'>是</wxc-button>
+      <wxc-button size='normal' type='warning' class='candidate' data-text='no' data-id='2' bindtap='choose'>否</wxc-button>
     </block>
     <block wx:else>
-      <block wx:for="{{issue.candidates}}" wx:key="item">
-        <button class='candidate' data-text='{{item}}'>{{item}}</button>
+      <block wx:for="{{issues[idx].candidates}}" wx:key="item">
+        <wxc-button size='normal' type='{{index==id ? (item==issues[idx].ans ? "success" : "danger") : "warning"}}' class='candidate' data-text='{{item}}' data-id='{{index}}' bindtap='choose'>{{item}}</wxc-button>
       </block>
     </block>
+  </view>
   <view class='next-container'></view>
+</view>
 </view>

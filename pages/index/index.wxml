@@ -1,5 +1,9 @@
 <!--index.wxml-->
 <view class="container">
+  <view wx:if='{{notice!=""}}'>
+  <wxc-notice scroll="{{false}}" close="{{true}}" bg-color="#ff9300" bg-rgba="rgba(255, 147, 0, 0)" show-icon="{{true}}" notice="{{notice}}"></wxc-notice>
+  </view>
+
   <view class='verse-title-container'>
     <text class='verse-title'>{{verseTitle}}</text>
   </view>
@@ -9,4 +13,13 @@
   <view class='start-container'>
     <button class='start' type='primary' bindtap='turnToPlay'>开始答题</button>
   </view>
-</view>
+</view>   
+
+  <!-- <view class='container'>
+  <wxc-panel title="{{verseTitle}}">
+    <view class='verse'><text>{{verse}}</text></view>
+  </wxc-panel>
+  <view class='start-container'>
+    <wxc-button size='large' type='warning' bindtap='turnToPlay'>开始答题</wxc-button>
+  </view>
+</view>   -->

@@ -1,0 +1,2 @@
+<!--pages/test/test.wxml-->
+<wxc-progress percent="{{progress}}" active-color="#ac89ff,#ff76a2"></wxc-progress>

@@ -1,13 +1,14 @@
 {
-  "pages":[
-    "pages/play/play",
+  "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/play/play",
+    "pages/logs/logs",
+    "pages/test/test"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "脚前的灯",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

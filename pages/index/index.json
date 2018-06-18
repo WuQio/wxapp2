@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "wxc-panel": "../../dist/packages/@minui/wxc-panel/dist/index",
+    "wxc-button": "../../dist/packages/@minui/wxc-button/dist/index",
+    "wxc-notice": "../../dist/packages/@minui/wxc-notice/dist/index"
+  }
+}

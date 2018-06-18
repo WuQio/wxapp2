@@ -1,3 +1,27 @@
 page{
-  background-color: #F4F4F4;
+  background-color: #EFEFEF;
+}
+.container{
+  margin-top: 24rpx;
+}
+.q-container{
+  text-align: center;
+  background-color: #FFE8EE;
+  padding-top: 18rpx;
+  padding-bottom: 18rpx;
+  border-radius: 28rpx;
+}
+.question{
+  font-size: 40rpx;
+  display: block;
+}
+.candidate{
+  display: block;
+  margin: 24rpx auto;
+  line-height: 50rpx;
+}
+.candidates-container{
+  padding: 0 auto;
+  margin: 50rpx auto;
+  text-align: center;
 }
