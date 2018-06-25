@@ -1,6 +1,6 @@
 const app = getApp();
-let issue = [];
 const getRandom = require("../../utils/util.js").getRandom;
+const shuffle = require("../../utils/util.js").shuffle;
 
 Page({
 
@@ -9,12 +9,12 @@ Page({
    */
   data: {
     issues: '',
-    idx: 0,
     progress: 100,
     id: undefined,
     clicked: false,
     reqDone: false,
-    interval: undefined
+    interval: undefined,
+    lst: []
   },
 
   /**
@@ -25,12 +25,18 @@ Page({
     wx.request({
       url: 'https://wuqio.mixue.ink/wxapp/json',
       success: (res)=>{
+        var tmpLst = new Array();
+        for(var i=0; i<res.data.length; i++){
+          tmpLst[i] = i;
+        }
+        shuffle(tmpLst);
         this.setData({
           issues: res.data,
-          idx: 41,
-          reqDone: true
+          reqDone: true,
+          lst: tmpLst
         });
         console.log(res.data);
+        console.log(tmpLst);
       }
     });
   },
@@ -54,9 +60,10 @@ Page({
       });
       if (pct === 0) {
         clearInterval(interval);
+        that.toNext();
       }
       pct--;
-    }, 150);
+    }, 100);
     this.setData({
       interval: interval
     });
@@ -69,17 +76,19 @@ Page({
     if (this.data.clicked){
       return;
     }
-    let t = e.target.dataset.id;
+    let t = parseInt(e.target.dataset.id);
     this.setData({
       id: t,
       clicked: true
     });
     setTimeout(() => {
+      var tmpLst = this.data.lst;
+      tmpLst.pop();
       this.setData({
-        idx: this.data.idx + 1,
         progress: 100,
         id: -1,
-        clicked: false
+        clicked: false,
+        lst: tmpLst
       });
       //倒计时条
       clearInterval(this.data.interval);
@@ -87,6 +96,19 @@ Page({
     }, 1000);
   },
   toNext: function(){
-    
+    let that = this;
+    (function(){
+      var tmpLst = that.data.lst;
+      tmpLst.pop();
+      that.setData({
+        progress: 100,
+        id: -1,
+        clicked: false,
+        lst: tmpLst
+      });
+      //倒计时条
+      // clearInterval(this.data.interval);
+      that.countDown();
+    })();
   }
 })
