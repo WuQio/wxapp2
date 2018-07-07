@@ -18,7 +18,18 @@ const getRandom = max =>{
   return Math.floor(Math.random()*max);
 }
 
+const shuffle = lst =>{
+  var len = lst.length;
+  for (var i = 0; i < len - 1; i++) {
+    var index = parseInt(Math.random() * (len - i));
+    var temp = lst[index];
+    lst[index] = lst[len - i - 1];
+    lst[len - i - 1] = temp;
+  }
+}
+
 module.exports = {
   formatTime: formatTime,
-  getRandom: getRandom
+  getRandom: getRandom,
+  shuffle: shuffle
 }
